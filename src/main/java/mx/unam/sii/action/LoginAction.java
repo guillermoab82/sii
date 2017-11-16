@@ -2,12 +2,16 @@ package mx.unam.sii.action;
 
 import org.apache.log4j.Logger;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 import mx.unam.sii.action.LoginAction;
+import mx.unam.sii.hibernate.Usuario;
+import mx.unam.sii.hibernate.UsuarioDAO;
 //import mx.unam.sii.hibernate.Usuario;
 //import mx.unam.sii.hibernate.UsuarioDAO;
 import mx.unam.sii.pojo.Login;
 
-public class LoginAction {
+public class LoginAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
 	private static final Logger logger = Logger.getLogger(LoginAction.class);
 	private Login login;
@@ -17,7 +21,7 @@ public class LoginAction {
 		
 		logger.info("Información recibida: " + login.toString());
 		
-		/*UsuarioDAO usuarioDAO = new UsuarioDAO();
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		Usuario usuario = usuarioDAO.login(login);
 		try {
 			if( usuario == null ){ // usuario no encontrado
@@ -27,9 +31,9 @@ public class LoginAction {
 		}catch(Exception e) {
 			addActionError(e.getMessage());
 			return "error";
-		}*/
+		}
 		
-		//logger.info("Usuario encontrado: " + usuario);
+		logger.info("Usuario encontrado: " + usuario);
 		return "success";
 	}
 

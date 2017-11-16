@@ -1,20 +1,20 @@
 package mx.unam.sii.pojo;
 
 public class Login {
-	private String mail;
+	private String usr;
 	private String password;
 	
 	/**
 	 * @return the mail
 	 */
-	public String getMail() {
-		return mail;
+	public String getUsr() {
+		return usr;
 	}
 	/**
 	 * @param mail the mail to set
 	 */
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setUsr(String mail) {
+		this.usr = mail;
 	}
 	/**
 	 * @return the password
@@ -34,8 +34,8 @@ public class Login {
 	@Override
 	public String toString() {
 		StringBuilder stringBuilder = new StringBuilder();
-		stringBuilder.append("Login [mail=");
-		stringBuilder.append(mail);
+		stringBuilder.append("Login [usr=");
+		stringBuilder.append(usr);
 		stringBuilder.append(", password=");
 		stringBuilder.append(password);
 		stringBuilder.append("]");

@@ -24,7 +24,7 @@
 			</s:if>
 			<form action="<s:url action="login"/>" method="POST" class="form-signin">
 				<span id="reauth-email" class="reauth-email"></span>
-				 <input type="email" id="mail" name="login.mail" class="form-control" placeholder="usuario@dominio.com" required autofocus> 
+				 <input type="text" id="mail" name="login.usr" class="form-control" placeholder="Usuario" required autofocus> 
 				 <input type="password" id="inputPassword" name="login.password" class="form-control" placeholder="Contraseña" required>
 				<button class="btn btn-lg btn-primary btn-block btn-signin"
 					type="submit">Iniciar sesi&oacute;n</button>
