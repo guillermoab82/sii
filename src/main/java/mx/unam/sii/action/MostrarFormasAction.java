@@ -14,6 +14,7 @@ public class MostrarFormasAction {
 	
 	private Login login;
 	private List<Profesores> profesores;
+	private Profesores profesor;
 	
 	public String showLoginForm() {
 		logger.info("showLoginForm()");
@@ -33,6 +34,8 @@ public class MostrarFormasAction {
 	}
 	
 	public String showProfesorRegister() {
+		logger.info("showProfesorRegister");
+		profesor = new Profesores();
 		return "success";
 	}
 	
@@ -58,6 +61,14 @@ public class MostrarFormasAction {
 
 	public void setProfesores(List<Profesores> profesores) {
 		this.profesores = profesores;
+	}
+
+	public Profesores getProfesor() {
+		return profesor;
+	}
+
+	public void setProfesor(Profesores profesor) {
+		this.profesor = profesor;
 	}
 
 }

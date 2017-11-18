@@ -2,6 +2,7 @@ package mx.unam.sii.hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -37,6 +38,7 @@ public class Profesores implements java.io.Serializable {
 	}
 	//Fin de constructores
 	@Id
+	//@GeneratedValue(strategy = IDENTITY)
 	@Column(name="nIDProfesor",nullable=false)
 	public int getNidprofesor() {
 		return nidprofesor;

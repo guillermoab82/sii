@@ -52,6 +52,11 @@
 		class="mx.unam.sii.action.MostrarFormasAction">
 			<result name="success" type="tiles">altaprofesor.tiles</result>
 		</action>
+		<action name="registroProfesor" method="registroProfesor"
+		class="mx.unam.sii.action.RegistroProfesorAction">
+			<result name="success" type="tiles">profesores.tiles</result>
+			<result name="input" type="tiles">altaprofesor.tiles</result>
+		</action>
 		
 <!-- 		<action name="registro" method="registroUsuario" 
 			class="mx.unam.sii.action.RegistroAction">

@@ -8,4 +8,5 @@ mx\unam\sii\hibernate\BaseHibernateDAO.class
 mx\unam\sii\hibernate\Usuario.class
 mx\unam\sii\action\BaseAction.class
 mx\unam\sii\hibernate\ProfesoresDAO.class
+mx\unam\sii\action\RegistroProfesorAction.class
 mx\unam\sii\hibernate\IBaseHibernateDAO.class

@@ -66,6 +66,23 @@ public class BaseHibernateDAO implements IBaseHibernateDAO {
 		}
 	}
 	
+	protected void save(Object obj) throws RuntimeException{
+		logger.debug("save()");
+		try {
+			startOperation();
+			session.save(obj);
+			tx.commit();
+		}catch (HibernateException e) {
+			logger.error( e );
+			tx.rollback();
+			throw new RuntimeException(e);
+		} finally {
+			logger.debug("Cerrando la conexión");
+			session.clear();
+			session.close();
+		}
+	}
+	
 	protected void startOperation() throws HibernateException {
 		logger.debug("startOperation()");
         
