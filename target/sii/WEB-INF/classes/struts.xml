@@ -44,6 +44,15 @@
 			<result name="error">/error.jsp</result>	
 		</action>
 		
+		<action name="showProfesores" method="showProfesorForm"
+		class="mx.unam.sii.action.MostrarFormasAction">
+			<result name="success" type="tiles">profesores.tiles</result>
+		</action>
+		<action name="showProfesorRegister" method="showProfesorRegister" 
+		class="mx.unam.sii.action.MostrarFormasAction">
+			<result name="success" type="tiles">altaprofesor.tiles</result>
+		</action>
+		
 <!-- 		<action name="registro" method="registroUsuario" 
 			class="mx.unam.sii.action.RegistroAction">
 			<result name="success" type="tiles">home.tiles</result>

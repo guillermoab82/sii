@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="tusuarios",catalog="sii")
@@ -122,6 +123,13 @@ public class Usuario implements java.io.Serializable {
 
 	public void setNidtipousr(int TipoUSR){
 		this.nidtipousr=TipoUSR;
+	}
+	@Transient
+	public String getNombreCompleto() {
+		return new StringBuffer().append( cnombre ).append(" ")
+				.append( capp ).append(
+							( capm != null ) ? " " + capm : ""
+						).toString();
 	}
 }
 

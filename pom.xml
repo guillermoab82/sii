@@ -20,6 +20,11 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-tiles3-plugin -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>

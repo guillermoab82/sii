@@ -6,6 +6,7 @@
 	<link href="css/login-styles.css" rel="stylesheet">
 	<link href="css/bootstrap-3.3.7.min.css" rel="stylesheet">
 	<script src="js/bootstrap-3.3.7.min.js"></script>
+	<title>.: Login SII :.</title>
 </head>
 <body>
 	<div class="container">

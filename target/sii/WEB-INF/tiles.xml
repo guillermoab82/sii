@@ -10,7 +10,15 @@
     
     <!-- Pagina de home que hereda la configuracion de baseLayout-->
     <definition name="home.tiles" extends="baseLayout">
-        <put-attribute name="title" value="Libreria en Linea" />
+        <put-attribute name="title" value=".:SII:." />
         <put-attribute name="body" value="/WEB-INF/paginas/home.jsp" />
+    </definition>
+    <definition name="profesores.tiles" extends="baseLayout">
+    	<put-attribute name="title" value=".:SII-Profesores:." />
+        <put-attribute name="body" value="/WEB-INF/paginas/profesores.jsp" />
+    </definition>
+    <definition name="altaprofesor.tiles" extends="baseLayout">
+    	<put-attribute name="title" value=".:SII-Alta Profesores:." />
+        <put-attribute name="body" value="/WEB-INF/paginas/altaprofesores.jsp" />
     </definition>
 </tiles-definitions>
