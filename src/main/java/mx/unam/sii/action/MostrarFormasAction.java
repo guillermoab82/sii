@@ -2,14 +2,22 @@ package mx.unam.sii.action;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.log4j.Logger;
+import org.apache.struts2.ServletActionContext;
 
 import mx.unam.sii.pojo.Login;
 import mx.unam.sii.action.MostrarFormasAction;
 import mx.unam.sii.hibernate.Profesores;
 import mx.unam.sii.hibernate.ProfesoresDAO;
 
-public class MostrarFormasAction {
+public class MostrarFormasAction extends BaseAction {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private static final Logger logger = Logger.getLogger(MostrarFormasAction.class);
 	
 	private Login login;
@@ -36,6 +44,23 @@ public class MostrarFormasAction {
 	public String showProfesorRegister() {
 		logger.info("showProfesorRegister");
 		profesor = new Profesores();
+		return "success";
+	}
+	
+	/*************************************
+	 * 
+	 * Empezamos con los métodos para eliminar
+	 * profesores
+	 */
+	
+	public String showDelProfesorForm() {
+		logger.info("showDelProfesorForm");
+		HttpServletRequest request = ServletActionContext.getRequest();
+		int nidprofesor =  Integer.parseInt(request.getParameter("id"));
+		getSession().put("idDelProfesor", nidprofesor);
+		logger.info("El id es " + nidprofesor);
+		ProfesoresDAO profesoresDAO = new ProfesoresDAO();
+		profesor = profesoresDAO.findById(nidprofesor);
 		return "success";
 	}
 	

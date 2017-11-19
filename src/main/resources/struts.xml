@@ -54,10 +54,29 @@
 		</action>
 		<action name="registroProfesor" method="registroProfesor"
 		class="mx.unam.sii.action.RegistroProfesorAction">
-			<result name="success" type="tiles">profesores.tiles</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">showProfesores</param>
+			</result>
 			<result name="input" type="tiles">altaprofesor.tiles</result>
 		</action>
-		
+		<!-- Acciones para eliminar profesores -->
+		<action name="showDelProfesorForm" method="showDelProfesorForm"
+		class="mx.unam.sii.action.MostrarFormasAction">
+			<result name="success" type="tiles">msgeliminar.tiles</result>
+		</action>
+		<action name="delProfesor" method="delProfesor"
+		class="mx.unam.sii.action.RegistroProfesorAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showProfesores</param>
+			</result>
+		</action>
+		<action name="cancelDelProfesor" method="cancelDelProfesor" 
+		class="mx.unam.sii.action.RegistroProfesorAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showProfesores</param>
+			</result>
+		</action>
+		<!-- Acciones para editar profesores -->
 <!-- 		<action name="registro" method="registroUsuario" 
 			class="mx.unam.sii.action.RegistroAction">
 			<result name="success" type="tiles">home.tiles</result>

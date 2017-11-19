@@ -4,23 +4,27 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <div class="card card-container">
 	<h3>Profesores registrados</h3>
-	<table style="width:100%">
+
+</div><!-- /card-container -->
+	<table class="table">
 		<caption><a href="<s:url action="showProfesorRegister"/>">Agregar nuevo Profesor</a></caption>
+		<thead>
 		<tr>
-			<td colspan=2></td>
-			<td>Nombre Completo</td>
-			<td>Dirección</td>
-			<td>Teléfono</td>
+			<th colspan=2></th>
+			<th>Nombre Completo</th>
+			<th>Dirección</th>
+			<th>Teléfono</th>
 		</tr>
+		</thead>
+		<tbody>
 		<c:forEach items="${profesores}" var="profesor">
-			
 			<tr>
 				<td><a href="<s:url action="showEditProfesorForm"/>?id=${profesor.nidprofesor}">Editar</a></td>
-				<td><a href="<s:url action="delProfesor"/>?id=${profesor.nidprofesor}">Eliminar</a></td>
-				<td>${profesor.cnombre}</td>
+				<td><a href="<s:url action="showDelProfesorForm"/>?id=${profesor.nidprofesor}">Eliminar</a></td>
+				<td>${profesor.cnombre} ${profesor.capp} ${profesor.capm}</td>
 				<td>${profesor.cdireccion}</td>
 				<td>${profesor.ctelefono}</td>
 			</tr>
 		</c:forEach>
+		</tbody>
 	</table>
-</div><!-- /card-container -->

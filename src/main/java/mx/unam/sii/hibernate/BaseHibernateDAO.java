@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -16,6 +17,7 @@ public class BaseHibernateDAO implements IBaseHibernateDAO {
 	private static final Logger logger = Logger.getLogger(BaseHibernateDAO.class);
 	private Session session;
 	private Transaction tx;
+	private Query query;
 
 	public BaseHibernateDAO() {
 		session = getSession();
@@ -82,11 +84,27 @@ public class BaseHibernateDAO implements IBaseHibernateDAO {
 			session.close();
 		}
 	}
+	//Función para eliminar profesores
+	protected void delqry(int id) {
+		startOperation();
+		query = session.createQuery("delete from Profesores where nIDProfesor= :idprof");
+		query.setParameter("idprof", new Integer(id));
+		query.executeUpdate();
+		tx.commit();
+		//if(result>0)
+	}
 	
 	protected void startOperation() throws HibernateException {
 		logger.debug("startOperation()");
         
 		//session = getSession();
         tx = session.beginTransaction();
+    }
+	
+	protected void commitOperation() throws HibernateException {
+		logger.debug("commitOperation()");
+        
+		//session = getSession();
+        tx.commit();
     }
 }

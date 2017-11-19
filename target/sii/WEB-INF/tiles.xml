@@ -21,4 +21,9 @@
     	<put-attribute name="title" value=".:SII-Alta Profesores:." />
         <put-attribute name="body" value="/WEB-INF/paginas/altaprofesores.jsp" />
     </definition>
+    <!-- Definición para el Tile del mensaje de Eliminar Profesores -->
+    <definition name="msgeliminar.tiles" extends="baseLayout">
+    	<put-attribute name="title" value=".:SII-Elimina Profesores:." />
+        <put-attribute name="body" value="/WEB-INF/paginas/eliminaprofesores.jsp" />
+    </definition>
 </tiles-definitions>
