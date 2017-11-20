@@ -7,12 +7,12 @@
 	<s:form action="modificaProfesor" namespace="/" method="POST" class="form-signin">
 		<span id="reauth-email" class="reauth-email"></span>
 		<s:fielderror/>
-		<s:textfield name="profesor.nidprofesor" class="form-control" enabled="false">${profesor.nidprofesor}</s:textfield>
-		<s:textfield name="profesor.cnombre" class="form-control" placeholder="Nombre">${profesor.cnombre}</s:textfield>
-		<s:textfield name="profesor.capp" class="form-control" placeholder="Primer Apellido" >${profesor.capp}</s:textfield>
-		<s:textfield name="profesor.capm" class="form-control" placeholder="Segundo Apellido">${profesor.capm}</s:textfield>
-		<s:textfield name="profesor.cdireccion" class="form-control" placeholder="Dirección">${profesor.cdireccion}</s:textfield>
-		<s:textfield name="profesor.ctelefono" class="form-control" placeholder="Teléfono">${profesor.ctelefono}</s:textfield>
+		<s:textfield name="profesor.nidprofesor" class="form-control" readonly="true"></s:textfield>
+		<s:textfield name="profesor.cnombre" class="form-control" placeholder="Nombre"></s:textfield>
+		<s:textfield name="profesor.capp" class="form-control" placeholder="Primer Apellido" ></s:textfield>
+		<s:textfield name="profesor.capm" class="form-control" placeholder="Segundo Apellido"></s:textfield>
+		<s:textfield name="profesor.cdireccion" class="form-control" placeholder="Dirección"></s:textfield>
+		<s:textfield name="profesor.ctelefono" class="form-control" placeholder="Teléfono"></s:textfield>
 		<button class="btn btn-lg btn-primary btn-block btn-signin"
 			type="submit">Modificar</button>
 	</s:form>
