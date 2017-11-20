@@ -32,6 +32,15 @@ public class RegistroProfesorAction extends BaseAction{
 	public String cancelDelProfesor() {
 		return "success";
 	}
+	
+	//Función para modificar profesores
+	public String modificaProfesor() {
+		logger.info("modificaProfesor");
+		ProfesoresDAO profesoresDAO = new ProfesoresDAO();
+		profesoresDAO.editProfesor(profesor);
+		logger.info("Salimos de modificaProfesor");
+		return "success";
+	}
 	public Profesores getProfesor() {
 		return profesor;
 	}

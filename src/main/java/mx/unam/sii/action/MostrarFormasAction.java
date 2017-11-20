@@ -63,8 +63,19 @@ public class MostrarFormasAction extends BaseAction {
 		profesor = profesoresDAO.findById(nidprofesor);
 		return "success";
 	}
-	
-	
+	/**********
+	 * Es el método para mostrar editar profesor
+	 */
+	public String showEditProfesor() {
+		logger.info("showEditProfesor");
+		HttpServletRequest request = ServletActionContext.getRequest();
+		int nidprofesor =  Integer.parseInt(request.getParameter("id"));
+		getSession().put("idDelProfesor", nidprofesor);
+		logger.info("El id es " + nidprofesor);
+		ProfesoresDAO profesoresDAO = new ProfesoresDAO();
+		profesor = profesoresDAO.findById(nidprofesor);
+		return "success";
+	}
 	/**
 	 * @return the login
 	 */

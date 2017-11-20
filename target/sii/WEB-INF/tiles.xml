@@ -26,4 +26,9 @@
     	<put-attribute name="title" value=".:SII-Elimina Profesores:." />
         <put-attribute name="body" value="/WEB-INF/paginas/eliminaprofesores.jsp" />
     </definition>
+    <!-- Definición para el Tile de Edición de Profesores -->
+    <definition name="editarprofesor.tiles" extends="baseLayout">
+    	<put-attribute name="title" value=".:SII-Edita Profesores:." />
+        <put-attribute name="body" value="/WEB-INF/paginas/editaprofesores.jsp" />
+    </definition>
 </tiles-definitions>

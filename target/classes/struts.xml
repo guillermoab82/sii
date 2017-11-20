@@ -77,6 +77,16 @@
 			</result>
 		</action>
 		<!-- Acciones para editar profesores -->
+		<action name="showEditProfesorForm" method="showEditProfesor"
+		class="mx.unam.sii.action.MostrarFormasAction">
+			<result name="success" type="tiles">editarprofesor.tiles</result>
+		</action>
+		<action name="modificaProfesor" method="modificaProfesor"
+		class="mx.unam.sii.action.RegistroProfesorAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showProfesores</param>
+			</result>
+		</action>
 <!-- 		<action name="registro" method="registroUsuario" 
 			class="mx.unam.sii.action.RegistroAction">
 			<result name="success" type="tiles">home.tiles</result>

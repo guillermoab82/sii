@@ -25,4 +25,8 @@ public class ProfesoresDAO extends BaseHibernateDAO {
 	public void delProfesores(int id) {
 		super.delqry(id);
 	}
+	//Función para modificar profesores
+	public void editProfesor(Profesores profesor) {
+		super.saveOrUpdate(profesor);
+	}
 }
