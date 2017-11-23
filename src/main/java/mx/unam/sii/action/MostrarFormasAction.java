@@ -33,6 +33,9 @@ public class MostrarFormasAction extends BaseAction {
 		return "success";
 	}
 	
+	public String showInicio() {
+		return "success";
+	}
 	public String showProfesorForm() {
 		logger.info("showProfesorForm");
 		ProfesoresDAO profesorDAO = new ProfesoresDAO();

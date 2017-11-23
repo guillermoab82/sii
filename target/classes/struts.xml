@@ -38,12 +38,34 @@
 		-->
 		<action name="login" method="loginUsuario" 
 			class="mx.unam.sii.action.LoginAction">
-			<result name="success" type="tiles">home.tiles</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">showInicio</param>
+				<param name="namespace">/admin</param>
+			</result>
 			<result name="input">showLoginForm</result>
 			<result name="not-found">/login.jsp</result>
 			<result name="error">/error.jsp</result>	
 		</action>
+	</package>
+	
+	<!-- Estamos en el namespace para administradores -->
+	<package name="admin" namespace="/admin" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
 		
+		<action name="showInicio" method="showInicio" 
+			class="mx.unam.sii.action.MostrarFormasAction">
+			<result name="success" type="tiles">home.tiles</result>
+		</action>
+		<action name="logout" method="logoutUsuario" 
+			class="mx.unam.sii.action.LoginAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showLoginForm</param>
+            	<param name="namespace">/</param>
+			</result>
+		</action>
 		<action name="showProfesores" method="showProfesorForm"
 		class="mx.unam.sii.action.MostrarFormasAction">
 			<result name="success" type="tiles">profesores.tiles</result>

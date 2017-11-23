@@ -4,7 +4,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <div class="card card-container">
 	<h3>Alta Profesores</h3>
-	<s:form action="registroProfesor" namespace="/" method="POST" class="form-signin">
+	<s:form action="registroProfesor" namespace="/admin" method="POST" class="form-signin">
 		<span id="reauth-email" class="reauth-email"></span>
 		<s:fielderror/>
 		<s:textfield name="profesor.cnombre" class="form-control" placeholder="Nombre" required="required"></s:textfield>

@@ -7,9 +7,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
-	<link href="css/login-styles.css" rel="stylesheet">
-	<link href="css/bootstrap-3.3.7.min.css" rel="stylesheet">
-	<script src="js/bootstrap-3.3.7.min.js"></script>
+	<link href="../css/login-styles.css" rel="stylesheet">
+	<link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+	<script src="../js/bootstrap-3.3.7.min.js"></script>
 </head>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
@@ -35,9 +35,7 @@
               <li><a href="#">Cursos</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-              <li><a href="../navbar-static-top/">Static top</a></li>
-              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+              <li class="active"><a href="<s:url action="logout" namespace="/admin"/>">Cerrar Sesión <span class="sr-only">(current)</span></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->

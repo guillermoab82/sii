@@ -38,9 +38,9 @@ public class LoginAction extends BaseAction{
 	}
 	
 	public String logoutUsuario() {
-		logger.info("Cerrando sesiÃ³n de usuario");
+		logger.info("Cerrando sesión de usuario");
 		cerrarrSesion();
-		addActionMessage("Su sesiÃ³n ha sido cerrada");
+		addActionMessage("Su sesión ha sido cerrada");
 		return "success";
 	}
 
