@@ -23,7 +23,7 @@ public class LoginAction extends BaseAction{
 		Usuario usuario = usuarioDAO.login(login);
 		try {
 			if( usuario == null ){ // usuario no encontrado
-				addActionError("Usuario y/o contrase√±a inv√°lidos");
+				addActionError("Usuario y/o contraseÒa inv·lidos");
 				return "not-found";
 			}
 			getSession().put("nombreCompleto", usuario.getNombreCompleto());

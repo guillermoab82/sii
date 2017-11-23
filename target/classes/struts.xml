@@ -87,6 +87,12 @@
 				<param name="actionName">showProfesores</param>
 			</result>
 		</action>
+		<!-- ACCIONES PARA CURSOS -->
+		<!-- Acción que muestra los cursos -->
+		<action name="showCursosForms" method="showCursosForms"
+		class="mx.unam.sii.action.MostrarFormasAction">
+			<result name="success" type="tiles">cursos.tiles</result>
+		</action>
 <!-- 		<action name="registro" method="registroUsuario" 
 			class="mx.unam.sii.action.RegistroAction">
 			<result name="success" type="tiles">home.tiles</result>

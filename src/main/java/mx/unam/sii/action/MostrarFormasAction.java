@@ -77,6 +77,15 @@ public class MostrarFormasAction extends BaseAction {
 		return "success";
 	}
 	/**
+	 * COMIENZAN MÉTODOS PARA CURSOS
+	 */
+	//Mostrar la form
+	public String showCursosForms() {
+		logger.info("showCursosForms");
+		
+		return "success";
+	}
+	/**
 	 * @return the login
 	 */
 	public Login getLogin() {

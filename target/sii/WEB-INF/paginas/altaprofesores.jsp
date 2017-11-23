@@ -7,8 +7,8 @@
 	<s:form action="registroProfesor" namespace="/" method="POST" class="form-signin">
 		<span id="reauth-email" class="reauth-email"></span>
 		<s:fielderror/>
-		<s:textfield name="profesor.cnombre" class="form-control" placeholder="Nombre"></s:textfield>
-		<s:textfield name="profesor.capp" class="form-control" placeholder="Primer Apellido" ></s:textfield>
+		<s:textfield name="profesor.cnombre" class="form-control" placeholder="Nombre" required="required"></s:textfield>
+		<s:textfield name="profesor.capp" class="form-control" placeholder="Primer Apellido" required="required"></s:textfield>
 		<s:textfield name="profesor.capm" class="form-control" placeholder="Segundo Apellido"></s:textfield>
 		<s:textfield name="profesor.cdireccion" class="form-control" placeholder="Dirección" ></s:textfield>
 		<s:textfield name="profesor.ctelefono" class="form-control" placeholder="Teléfono"></s:textfield>
