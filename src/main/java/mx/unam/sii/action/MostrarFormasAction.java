@@ -9,6 +9,8 @@ import org.apache.struts2.ServletActionContext;
 
 import mx.unam.sii.pojo.Login;
 import mx.unam.sii.action.MostrarFormasAction;
+import mx.unam.sii.hibernate.Cursos;
+import mx.unam.sii.hibernate.CursosDAO;
 import mx.unam.sii.hibernate.Profesores;
 import mx.unam.sii.hibernate.ProfesoresDAO;
 
@@ -23,6 +25,7 @@ public class MostrarFormasAction extends BaseAction {
 	private Login login;
 	private List<Profesores> profesores;
 	private Profesores profesor;
+	private List<Cursos> cursos;
 	
 	public String showLoginForm() {
 		logger.info("showLoginForm()");
@@ -85,7 +88,8 @@ public class MostrarFormasAction extends BaseAction {
 	//Mostrar la form
 	public String showCursosForms() {
 		logger.info("showCursosForms");
-		
+		CursosDAO curso = new CursosDAO();
+		cursos = (List<Cursos>)(Object) curso.getAllCursos();
 		return "success";
 	}
 	/**
@@ -117,6 +121,13 @@ public class MostrarFormasAction extends BaseAction {
 
 	public void setProfesor(Profesores profesor) {
 		this.profesor = profesor;
+	}
+	
+	public List<Cursos> getCursos(){
+		return cursos;
+	}
+	public void setCursos(List<Cursos> curso) {
+		this.cursos = curso;
 	}
 
 }

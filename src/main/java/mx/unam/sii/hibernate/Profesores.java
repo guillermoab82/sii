@@ -22,7 +22,7 @@ public class Profesores implements java.io.Serializable {
 	private String capm;
 	private String cdireccion;
 	private String ctelefono;
-	private Set<Cursos> curso = new HashSet<Cursos>(0);
+	private Set<Cursos> curso = new HashSet<Cursos>();
 	
 	//Constructores
 	public Profesores() {
@@ -104,12 +104,12 @@ public class Profesores implements java.io.Serializable {
 							( capm != null ) ? " " + capm : ""
 						).toString();
 	}
-	
-	@ManyToMany(fetch = FetchType.LAZY,mappedBy="profesores")
+	/*
+	@ManyToMany(fetch = FetchType.LAZY,mappedBy="tprofesores")
 	public Set<Cursos> getCursos(){
 		return this.curso;
 	}
 	public void setCursos(Set<Cursos> curso) {
 		this.curso = curso;
-	}
+	}*/
 }

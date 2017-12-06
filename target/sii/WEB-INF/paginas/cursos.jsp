@@ -3,11 +3,10 @@
 <%@ taglib prefix = "c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <div class="card card-container">
-	<h3>Cursos Registrados</h3>
-
-</div><!-- /card-container 
+	<h3>Cursos Registrados Nuevo</h3>
+</div> <!-- /card-container -->
 	<table class="table">
-		<caption><a href="<s:url action="showCursosRegister"/>">Agregar nuevo Curso</a></caption>
+		<caption><a href="#>">Agregar nuevo Curso</a></caption>
 		<thead>
 		<tr>
 			<th colspan=2></th>
@@ -17,14 +16,14 @@
 		</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${cursos}" var="curso">
+		<!--<c:forEach items="${cursos}" var="curso">
 			<tr>
-				<td><a href="<s:url action="showEditCursoForm"/>?id=${curso.nidcurso}">Editar</a></td>
-				<td><a href="<s:url action="showDelCursoForm"/>?id=${curso.nidcurso}">Eliminar</a></td>
+				<td><a href="#">Editar</a></td>
+				<td><a href="#">Eliminar</a></td>
 				<td>${curso.cnombrecurso}</td>
 				<td>${curso.cupo}</td>
-				<td>${curso.cnombre} ${curso.capp} ${curso.capm}</td>
+				<td>678</td>
 			</tr>
-		</c:forEach>
+		</c:forEach> -->
 		</tbody>
-	</table>-->
+	</table>

@@ -115,11 +115,11 @@
 		class="mx.unam.sii.action.MostrarFormasAction">
 			<result name="success" type="tiles">cursos.tiles</result>
 		</action>
-<!-- 		<action name="registro" method="registroUsuario" 
+		<!-- 
+ 		<action name="registro" method="showCursosRegister" 
 			class="mx.unam.sii.action.RegistroAction">
 			<result name="success" type="tiles">home.tiles</result>
 			<result name="input">/registro.jsp</result>
-		</action>
-		 -->
+		</action> -->
 	</package>
 </struts>

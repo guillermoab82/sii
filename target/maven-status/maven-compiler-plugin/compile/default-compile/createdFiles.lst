@@ -1,6 +1,7 @@
 mx\unam\sii\hibernate\HibernateSessionFactory.class
 mx\unam\sii\hibernate\UsuarioDAO.class
 mx\unam\sii\action\LoginAction.class
+mx\unam\sii\hibernate\CursosDAO.class
 mx\unam\sii\pojo\Login.class
 mx\unam\sii\hibernate\Profesores.class
 mx\unam\sii\action\MostrarFormasAction.class

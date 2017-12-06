@@ -1,6 +1,5 @@
 package mx.unam.sii.hibernate;
 
-import java.io.Serializable;
 import java.util.List;
 
 import org.hibernate.Criteria;

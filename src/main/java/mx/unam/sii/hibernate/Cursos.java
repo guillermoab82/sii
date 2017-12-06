@@ -21,7 +21,7 @@ public class Cursos implements java.io.Serializable{
 	private int nidcurso;
 	private String cnombrecurso;
 	private int ncupo;
-	private Set<Profesores> profesor = new HashSet<Profesores>(0);
+	private Set<Profesores> profesor = new HashSet<Profesores>();
 
 	//Constructores
 	public Cursos() {
@@ -61,7 +61,7 @@ public class Cursos implements java.io.Serializable{
 	public void setNcupo(int nCupo){
 		this.ncupo=nCupo;
 	}
-	
+	/*
 	@ManyToMany(fetch = FetchType.LAZY,cascade= {CascadeType.ALL})
 	@JoinTable(
 			name = "tprofecursos", 
@@ -72,6 +72,6 @@ public class Cursos implements java.io.Serializable{
 	}
 	public void setProfesores(Set<Profesores> profesore) {
 		this.profesor = profesore;
-	}
+	}*/
 
 }
