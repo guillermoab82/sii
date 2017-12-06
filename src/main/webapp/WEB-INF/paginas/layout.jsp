@@ -32,10 +32,10 @@
               <li class="active"><a href="#">Home</a></li>
               <li><a href='#'>Alumnos</a></li>
               <li><a href='<s:url action="showProfesores"/>'>Profesores</a></li>
-              <li><a href="#">Cursos</a></li>
+              <li><a href='<s:url action="showCursosForms"/>'>Cursos</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="<s:url action="logout" namespace="/admin"/>">Cerrar Sesión <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href='<s:url action="logout" namespace="/admin"/>'>Cerrar Sesión <span class="sr-only">(current)</span></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->

@@ -31,4 +31,9 @@
     	<put-attribute name="title" value=".:SII-Edita Profesores:." />
         <put-attribute name="body" value="/WEB-INF/paginas/editaprofesores.jsp" />
     </definition>
+    <!-- Definición para el Tile de Mostrar Cursos -->
+    <definition name="cursos.tiles" extends="baseLayout">
+    	<put-attribute name="title" value=".:SII-Cursos:."/>
+    	<put-attribute name="body" value="/WEB-INF/paginas/cursos.jsp"/>
+    </definition>
 </tiles-definitions>

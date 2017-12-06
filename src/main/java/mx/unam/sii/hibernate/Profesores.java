@@ -1,8 +1,13 @@
 package mx.unam.sii.hibernate;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -17,6 +22,7 @@ public class Profesores implements java.io.Serializable {
 	private String capm;
 	private String cdireccion;
 	private String ctelefono;
+	private Set<Cursos> curso = new HashSet<Cursos>(0);
 	
 	//Constructores
 	public Profesores() {
@@ -97,5 +103,13 @@ public class Profesores implements java.io.Serializable {
 				.append( capp ).append(
 							( capm != null ) ? " " + capm : ""
 						).toString();
+	}
+	
+	@ManyToMany(fetch = FetchType.LAZY,mappedBy="profesores")
+	public Set<Cursos> getCursos(){
+		return this.curso;
+	}
+	public void setCursos(Set<Cursos> curso) {
+		this.curso = curso;
 	}
 }
