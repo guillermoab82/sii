@@ -104,12 +104,13 @@ public class Profesores implements java.io.Serializable {
 							( capm != null ) ? " " + capm : ""
 						).toString();
 	}
-	/*
-	@ManyToMany(fetch = FetchType.LAZY,mappedBy="tprofesores")
+/*	
+	@ManyToMany(fetch = FetchType.LAZY,mappedBy="profesor")
 	public Set<Cursos> getCursos(){
 		return this.curso;
 	}
 	public void setCursos(Set<Cursos> curso) {
 		this.curso = curso;
-	}*/
+	}
+	*/
 }

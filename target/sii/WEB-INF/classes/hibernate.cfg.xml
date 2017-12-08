@@ -24,7 +24,7 @@
 		
 		<mapping class="mx.unam.sii.hibernate.Usuario" />
 		<mapping class="mx.unam.sii.hibernate.Profesores" />
-		<!-- <mapping class="mx.unam.sii.hibernate.Cursos"/> -->
+		<mapping class="mx.unam.sii.hibernate.Cursos"/>
 		
 	</session-factory>
 

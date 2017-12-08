@@ -90,6 +90,7 @@ public class MostrarFormasAction extends BaseAction {
 		logger.info("showCursosForms");
 		CursosDAO curso = new CursosDAO();
 		cursos = (List<Cursos>)(Object) curso.getAllCursos();
+		logger.info("Salio de Cursos");
 		return "success";
 	}
 	/**

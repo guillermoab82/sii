@@ -48,6 +48,8 @@ public class BaseHibernateDAO implements IBaseHibernateDAO {
 	protected List<Object> findAll(Class<?> clazz) {
 		logger.debug("findAll()");
 		Criteria criteria = getSession().createCriteria(clazz);
+
+		logger.info("Estamos en findALL");
 		return criteria.list();
 	}
 	

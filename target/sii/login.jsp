@@ -30,9 +30,9 @@
 				<button class="btn btn-lg btn-primary btn-block btn-signin"
 					type="submit">Iniciar sesi&oacute;n</button>
 			</form><!-- /form -->
-			 <a href="<s:url action="showRegisterForm"/>" class="forgot-password">
+			 <!-- <a href="<s:url action="showRegisterForm"/>" class="forgot-password">
                 ¿A&uacute;n no eres usuario?
-            </a>
+            </a> -->
 		</div><!-- /card-container -->
 	</div><!-- /container -->
 </body>
